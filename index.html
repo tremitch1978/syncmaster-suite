@@ -138,30 +138,14 @@
             <p>&copy; 2025 SyncMaster Suite. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        const stripe = Stripe('pk_test_51S3JVFGsfMlO3kMDNE1ksrEvo9R9Nbn6LrVpbjuq5bTIEEgZlE3z2jODKpSS5MFdL37JbEttutedSLPTszAc7VQv00TPtxastN');
-
-       function buyPlan(planId) {
-    fetch('https://tremitch78.pythonanywhere.com/api/create-checkout-session', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            plan_id: planId
-        } )
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.checkout_url) {
-            window.location.href = data.checkout_url;
-        } else {
-            alert('Error creating checkout session');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Error processing payment');
-    });
-}</html>
+<script>
+    function buyPlan(planId ) {
+        const links = {
+            1: 'https://buy.stripe.com/3cI3cw9VFeX5cwC1sJ6Na01', // Starter
+            2: 'https://buy.stripe.com/cNi00kaZJcOX1RY2wN6Na02', // Growth
+            3: 'https://buy.stripe.com/3cI14oebV9CL68e9Zf6Na03', // Pro
+            4: 'https://buy.stripe.com/7sYcN6ffZ3encwCc7n6Na04'  // Enterprise
+        };
+        window.location.href = links[planId];
+    }
+</script>    
