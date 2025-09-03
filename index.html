@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyncMaster Suite - Complete E-commerce Management</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 100px 0; text-align: center; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 700; }
+        .hero p { font-size: 1.3rem; margin-bottom: 30px; opacity: 0.9; }
+        .cta-button { background: #ff6b6b; color: white; padding: 15px 40px; border: none; border-radius: 50px; font-size: 1.1rem; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.3s; }
+        .cta-button:hover { background: #ff5252; transform: translateY(-2px); }
+        .features { padding: 80px 0; background: #f8f9fa; }
+        .features h2 { text-align: center; font-size: 2.5rem; margin-bottom: 60px; color: #333; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .feature-card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
+        .feature-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: #667eea; }
+        .pricing { padding: 80px 0; }
+        .pricing h2 { text-align: center; font-size: 2.5rem; margin-bottom: 20px; }
+        .pricing-subtitle { text-align: center; font-size: 1.2rem; margin-bottom: 60px; color: #666; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .pricing-card { background: white; border: 2px solid #e9ecef; border-radius: 15px; padding: 40px; text-align: center; position: relative; }
+        .pricing-card.popular { border-color: #667eea; transform: scale(1.05); }
+        .pricing-card.popular::before { content: "Most Popular"; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #667eea; color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.9rem; }
+        .price { font-size: 3rem; font-weight: 700; color: #333; margin-bottom: 10px; }
+        .price span { font-size: 1rem; color: #666; }
+        .features-list { list-style: none; margin: 30px 0; }
+        .features-list li { padding: 8px 0; color: #666; }
+        .features-list li::before { content: "✓"; color: #28a745; font-weight: bold; margin-right: 10px; }
+        .why-us { padding: 80px 0; background: #f8f9fa; }
+        .why-us h2 { text-align: center; font-size: 2.5rem; margin-bottom: 40px; }
+        .why-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .why-content p { font-size: 1.1rem; margin-bottom: 20px; color: #666; }
+        .contact { padding: 80px 0; text-align: center; }
+        .contact h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .contact p { font-size: 1.2rem; margin-bottom: 40px; color: #666; }
+        .email-signup { max-width: 500px; margin: 0 auto; display: flex; gap: 15px; }
+        .email-signup input { flex: 1; padding: 15px; border: 2px solid #e9ecef; border-radius: 10px; font-size: 1rem; }
+        .email-signup button { background: #667eea; color: white; border: none; padding: 15px 30px; border-radius: 10px; cursor: pointer; }
+        footer { background: #333; color: white; text-align: center; padding: 40px 0; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .email-signup { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>SyncMaster Suite</h1>
+            <p>The Complete E-commerce Management Solution</p>
+            <p>Everything you need to scale from startup to $10M+ revenue</p>
+            <a href="#pricing" class="cta-button">Get Started - 7 Day Free Trial</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Two Powerful Products, One Complete Solution</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>SyncMaster Pro</h3>
+                    <p>Advanced inventory management with barcode system, shipping calculator, and tax calculator. Everything you need to manage your products and warehouses efficiently.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>SyncMaster Fulfill</h3>
+                    <p>Multi-platform fulfillment automation supporting 8 social commerce platforms including TikTok Shop, Instagram, Facebook, YouTube, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Unified Platform</h3>
+                    <p>Real-time sync between inventory and fulfillment. Orders from social platforms automatically update your inventory. Complete business visibility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Simple, Fair Pricing</h2>
+            <p class="pricing-subtitle">Choose the plan that fits your business size</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$89<span>/month</span></div>
+                    <ul class="features-list">
+                        <li>SyncMaster Pro (Basic)</li>
+                        <li>SyncMaster Fulfill (100 orders)</li>
+                        <li>2 social platforms</li>
+                        <li>5 creators</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Start Free Trial</a>
+                </div>
+                <div class="pricing-card popular">
+                    <h3>Growth</h3>
+                    <div class="price">$179<span>/month</span></div>
+                    <ul class="features-list">
+                        <li>SyncMaster Pro (Standard)</li>
+                        <li>SyncMaster Fulfill (500 orders)</li>
+                        <li>5 social platforms</li>
+                        <li>10 creators</li>
+                        <li>Advanced analytics</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Start Free Trial</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Pro</h3>
+                    <div class="price">$279<span>/month</span></div>
+                    <ul class="features-list">
+                        <li>SyncMaster Pro (Premium)</li>
+                        <li>SyncMaster Fulfill (2K orders)</li>
+                        <li>8 social platforms</li>
+                        <li>Unlimited creators</li>
+                        <li>Scan & ship</li>
+                        <li>Phone support</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Start Free Trial</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$349<span>/month</span></div>
+                    <ul class="features-list">
+                        <li>Everything in Pro</li>
+                        <li>Unlimited orders</li>
+                        <li>White-label options</li>
+                        <li>Custom integrations</li>
+                        <li>Dedicated support</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us">
+        <div class="container">
+            <h2>Why We Keep Prices Fair</h2>
+            <div class="why-content">
+                <p><strong>We're a small business, just like you.</strong> We understand the challenges of scaling an e-commerce operation and the pressure of expensive software costs.</p>
+                <p>While competitors like Linnworks charge $100-500/month for basic features, we believe powerful tools should be accessible to growing businesses.</p>
+                <p><strong>Our mission:</strong> Democratize enterprise-grade e-commerce tools so every business can compete with the big players.</p>
+                <p><em>"We succeed when you succeed."</em></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Ready to Scale Your Business?</h2>
+            <p>Join hundreds of businesses using SyncMaster Suite to automate their operations</p>
+            <div class="email-signup">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Start Free Trial</button>
+            </div>
+            <p style="margin-top: 20px; color: #666;">No credit card required • Setup in 60 seconds • Cancel anytime</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SyncMaster Suite. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
