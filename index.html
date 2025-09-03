@@ -142,29 +142,26 @@
     <script>
         const stripe = Stripe('pk_test_51S3JVFGsfMlO3kMDNE1ksrEvo9R9Nbn6LrVpbjuq5bTIEEgZlE3z2jODKpSS5MFdL37JbEttutedSLPTszAc7VQv00TPtxastN');
 
-        function buyPlan(planId) {
-            fetch('https://tremitch78.pythonanywhere.com/api/create-checkout-session', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    plan_id: planId
-                } )
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.checkout_url) {
-                    window.location.href = data.checkout_url;
-                } else {
-                    alert('Error creating checkout session');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Error processing payment');
-            });
+       function buyPlan(planId) {
+    fetch('https://tremitch78.pythonanywhere.com/api/create-checkout-session', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            plan_id: planId
+        } )
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.checkout_url) {
+            window.location.href = data.checkout_url;
+        } else {
+            alert('Error creating checkout session');
         }
-    </script>
-</body>
-</html>
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error processing payment');
+    });
+}</html>
